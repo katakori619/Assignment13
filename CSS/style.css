@@ -1,0 +1,39 @@
+body {
+    background-color: #272b30;
+    font-family: "Comfortaa", cursive;
+}
+.parent img {
+    height: 30vh;
+}
+nav {
+    width: 75%;
+    background-color: rgb(58, 73, 123) !important;
+    margin-top: -30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+}
+nav .navbar-brand{
+    /* font-family: "Nerko One" , cursive; */
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    color: white;
+}
+nav a.links {
+    color: white;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    text-decoration: none;
+}
+nav a.links:hover{
+    color: #09c !important;
+    transition: 0.5s color;
+}
+.active {
+    color: #09c !important;
+    transition: 0.5s color;
+}
+.card {
+    background-color: transparent;
+    color: white;
+}
