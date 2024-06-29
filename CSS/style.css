@@ -8,9 +8,15 @@ body {
 nav {
     width: 75%;
     background-color: rgb(58, 73, 123) !important;
-    margin-top: -30px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.7); 
+}
+.parentnav{
+    z-index: 300;
+    margin-top: -30px;
+}
+.image a:hover{
+    color: white;
 }
 nav .navbar-brand{
     /* font-family: "Nerko One" , cursive; */
@@ -126,5 +132,18 @@ section.details{
     .container{
         margin-left: 20px;
         margin-right: 20px;
+    }
+}
+@media(min-width:500px) and (max-width: 766px){
+    .card{
+        width: 28rem !important;
+    }
+    .row{
+        justify-content: center;
+    }
+}
+@media(max-width:499px) {
+    .row{
+        justify-content: center;
     }
 }

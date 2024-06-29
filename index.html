@@ -2,32 +2,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Game Over</title>
+        <title>Home</title>
         <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <section class="games">
           <div class="parent">
             <img src="images/background.png" class="w-100" alt="">
         </div>
-        <div class="parentnav d-flex justify-content-center">
-          <nav class="navbar navbar-expand-lg py-3 position-sticky top-0">
+        <div class="parentnav d-flex justify-content-center position-sticky top-0">
+          <nav class="navbar navbar-expand-lg py-3">
             <div class="container-fluid">
-                <div class="image me-2">
-                    <img src="images/logo-sm.png" alt="" width="35px" height="35px">
+                <div class="image d-flex align-items-center">
+                    <img src="images/logo-sm.png" class="me-2" alt="" width="35px" height="35px">
+                    <a class="navbar-brand" href="#">GAME REVIEWS</a>
                 </div>
-              <a class="navbar-brand" href="#">GAME REVIEWS</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse d-flex justify-content-lg-end" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarSupportedContent">
                 <ul class="navbar-nav menu mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="mx-2 links active" aria-current="page" href="#">MMORPG</a>
@@ -52,8 +46,8 @@
             </div>
           </nav>
         </div>
-        <div class="highparent d-flex justify-content-center">
-          <main class="container m-xl-auto my-5">
+        <div class="highparent my-5 d-flex justify-content-center">
+          <main class="container m-xl-auto">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4" id="content">
               
             </div>
@@ -61,7 +55,7 @@
         </div>
       </section>
       <section class="details d-none">
-        <div class="container">
+        <div class="container mb-5">
            <header class="hstack justify-content-between">
               <h1 class="text-center h3 py-4">Details Game</h1>
               <button class="btn-close btn-close-white" id="btnClose"></button>
