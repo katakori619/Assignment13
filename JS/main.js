@@ -1,4 +1,6 @@
 async function getGames(categoryOption) {
+    const loading = document.querySelector(".loading");
+    loading.classList.remove("d-none");
     const options = {
       method: "GET",
       headers: {
@@ -13,7 +15,7 @@ async function getGames(categoryOption) {
     );
     const response = await api.json();
     displayGames(response)
-    // console.log(response);
+    loading.classList.add("d-none");
 }  
 
 function displayGames(response){
@@ -43,6 +45,8 @@ function displayGames(response){
     document.getElementById('content').innerHTML = cartona
 }
 async function getDetails(gameid){
+    const loading = document.querySelector(".loading");
+    loading.classList.remove("d-none");
     const options = {
         method: "GET",
         headers: {
@@ -56,8 +60,8 @@ async function getDetails(gameid){
         options
       );
       const response = await api.json();
-      console.log(response);
       displayDetails(response)
+      loading.classList.add("d-none");
 }
 function displayDetails(response){
     let cartona = ``
