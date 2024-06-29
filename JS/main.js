@@ -20,7 +20,7 @@ function displayGames(response){
     let cartona = ``
     for(var i = 0;i<response.length;i++){
         cartona += `
-        <div id="${response[i].id}" class="card mx-2" style="width: 19rem;">
+        <div id="${response[i].id}" class="card mx-2" style="width: 19rem;" onclick="detailsclick(this)">
                 <div class="image card-img-top mt-3 position-relative">
                   <img src="${response[i].thumbnail}" class="w-100" alt="...">
                 </div>
@@ -52,12 +52,12 @@ async function getDetails(gameid){
       };
     
       const api = await fetch(
-        `https://free-to-play-games-database.p.rapidapi.com/api/games?id=${gameid}`,
+        `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${gameid}`,
         options
       );
       const response = await api.json();
+      console.log(response);
       displayDetails(response)
-      // console.log(response);
 }
 function displayDetails(response){
     let cartona = ``
@@ -74,7 +74,7 @@ function displayDetails(response){
             <a class="btn btn-outline-warning text-white" target="_blank" href="${response.game_url}">Show Game</a>
             </div>
     `
-    document.getElementById('detailsContent') = cartona
+    document.getElementById('detailsContent').innerHTML = cartona
 }
 document.querySelectorAll(".menu a").forEach((link) => {
     getGames('mmorpg');
@@ -89,11 +89,11 @@ document.getElementById("btnClose").addEventListener("click", () => {
     document.querySelector(".games").classList.remove("d-none");
     document.querySelector(".details").classList.add("d-none");
 });
-document.querySelectorAll(".card").forEach((item) => {
-    console.log(item)
-    item.addEventListener("click", () => {
-        const id = item.id;
-        console.log(id);
-    //   this.getDetails(id);
-       });
-    });
+function detailsclick(e){
+    showdetails(e.id)
+}
+function showdetails(id){
+    getDetails(id)
+    document.querySelector(".games").classList.add("d-none");
+    document.querySelector(".details").classList.remove("d-none");
+}
