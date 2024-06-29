@@ -78,13 +78,17 @@ section.details{
     color: white;
 }
 .loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 9999;
     inset: 0;
     background-color: #272b30e3;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 100%;
+    height: 100vh;
 }
 .loader {
     width: 100px;
@@ -118,3 +122,9 @@ section.details{
       transform: rotate(360deg);
     }
   } 
+@media (min-width: 767px) and (max-width:991px){
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
